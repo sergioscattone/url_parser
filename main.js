@@ -1,14 +1,14 @@
 /**
  * Create a hash object from URL 
  * @param  {String} urlFormat   The scructure of the URL
- * @param  {String} Url         The URL itself
+ * @param  {String} urlData     The URL itself
  * @return {Object} hash        The object with the parameters
  */
-function getHashFromUrlParser(urlFormat, Url) {
+function getHashFromUrlParser(urlFormat, urlData) {
     const urlFormatSections = urlFormat.split('/');
     urlFormatSections.shift();
 
-    const urlSeparated = Url.split('?');
+    const urlSeparated = urlData.split('?');
     const urlSectionsNoParams = urlSeparated[0];
     const urlSectionsParams = urlSeparated[1];
     const urlSections = urlSectionsNoParams.split('/');
